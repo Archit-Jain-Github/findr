@@ -4,7 +4,7 @@ Findr is a sleek, customizable chat interface built with React, designed to simu
 
 ⸻
 
-🚀 Live Demo: [Click for Live Demo](#)
+🚀 Live Demo: [Click for Live Demo](https://findr.architjain.dev/)
 
 ⸻
 
