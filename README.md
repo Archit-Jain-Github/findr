@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# 🧠 Findr — A Lightweight ChatGPT-like UI in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Findr is a sleek, customizable chat interface built with React, designed to simulate the ChatGPT experience. It integrates with GitHub’s hosted GPT-4.1 model (via Azure OpenAI) and provides a clean, focused environment for interactive prompts.
 
-## Available Scripts
+⸻
 
-In the project directory, you can run:
+🚀 Live Demo: [Click for Live Demo](#)
 
-### `npm start`
+⸻
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📌 Features
+	•	✨ Minimal ChatGPT-style UI
+	•	⚛️ Built entirely with React and Hooks
+	•	🧠 Connects to GitHub-hosted GPT-4.1 endpoint
+	•	📦 Uses OpenAI-compatible API (via GitHub Models)
+	•	🧵 Clean chat threading with user & bot messages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⸻
 
-### `npm test`
+🧰 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Frontend: React (with Hooks), JSX, Vanilla CSS
+- API: GitHub Models (openai SDK compatible)
+- Auth: GitHub Personal Access Token (Classic)
 
-### `npm run build`
+⸻
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+⚙️ Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ 1. Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/your-username/findr.git
+cd findr
+```
 
-### `npm run eject`
+✅ 2. Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Ensure you have Node.js and npm installed
+# Then run:
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⸻
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Start the development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔐 Setup GPT-4.1 via GitHub Models
 
-## Learn More
+You’ll need a GitHub personal access token to authenticate with GitHub Models.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Visit 👉: [Github Models](https://github.com/marketplace/models/azure-openai/gpt-4-1/playground)
 
-### Code Splitting
+1. Click “Use this model”
+2. Select “Create Personal Access Token”
+3. Then click “Generate new token”
+4. Choose “Generate new token (classic)”
+5. Give it a name (e.g. findr-token)
+6. Leave default scopes checked
+7. Click “Generate token”
+8. Copy your token (looks like: ghp_************)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+⸻
 
-### Analyzing the Bundle Size
+🔧 Add the Token to the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a file at: `/src/apiKey.js`
 
-### Making a Progressive Web App
+Paste the following code:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```javascript
+// src/apiKey.js
+export const GITHUB_TOKEN = "<Paste your token here>";
+```
 
-### Advanced Configuration
+Note: Do NOT commit this file publicly if your repo is public.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+⸻
 
-### Deployment
+▶️ Run the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+Your app will be available at: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⸻
+
+🔐 API Safety Notice
+
+This app uses the openai SDK on the frontend. Although GitHub tokens are required, exposing secrets in the browser is not safe for production.
+For production use, consider implementing a backend proxy to handle API requests securely.
+⸻
