@@ -9,6 +9,7 @@ Findr is a sleek, customizable chat interface built with React, designed to simu
 ⸻
 
 📌 Features
+
 	•	✨ Minimal ChatGPT-style UI
 	•	⚛️ Built entirely with React and Hooks
 	•	🧠 Connects to GitHub-hosted GPT-4.1 endpoint
@@ -30,7 +31,7 @@ Findr is a sleek, customizable chat interface built with React, designed to simu
 ✅ 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/findr.git
+git clone https://github.com/Archit-Jain-Github/findr.git
 cd findr
 ```
 
@@ -74,7 +75,7 @@ Create a file at: `/src/apiKey.js`
 
 Paste the following code:
 
-```javascript
+```JavaScript
 // src/apiKey.js
 export const GITHUB_TOKEN = "<Paste your token here>";
 ```
@@ -95,6 +96,7 @@ Your app will be available at: `http://localhost:3000`
 
 🔐 API Safety Notice
 
-This app uses the openai SDK on the frontend. Although GitHub tokens are required, exposing secrets in the browser is not safe for production.
-For production use, consider implementing a backend proxy to handle API requests securely.
+This app uses the OpenAI SDK on the frontend. Although GitHub tokens are required, exposing secrets in the browser is not a safe practice for production environments.
+For production use, consider implementing a backend proxy to securely handle API requests.
+
 ⸻
